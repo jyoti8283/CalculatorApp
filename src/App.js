@@ -1,18 +1,13 @@
 import {React, useState} from "react";
 import  "./App.css";
 
-
-
-
 function App() {
 const [input, setInput] = useState("");
 const [result, setResult] = useState("");
 
-
 const handleClick = (value) =>{
  setInput((prev)=> prev + value);
 };
-
 
 const handleClear= () =>{
  setInput("");
@@ -22,7 +17,6 @@ const handleClear= () =>{
  setInput(input.slice(0,-1));
 };
 
-
 const calculate=()=>{
  try{
    setResult(eval(input).toString());
@@ -30,9 +24,6 @@ const calculate=()=>{
    setResult("error");
  };
 };
-
-
-
 
  return (
    <>
@@ -65,6 +56,5 @@ const calculate=()=>{
    </>
 );
 }
-
 
 export default App;
